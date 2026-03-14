@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trilha DevOps Academy Workshop - GitHub e Azure DevOps</title>
+    <title>Trilha DevOps Workshop - Domínio Completo da Engenharia DevOps</title>
     <style>
         * {
             margin: 0;
@@ -11,300 +11,636 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #ff6b35;
+            --dark-color: #1a1a1a;
+            --light-color: #f5f5f5;
+            --text-color: #333;
+            --success-color: #28a745;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--text-color);
+            background-color: #fff;
         }
 
-        /* Header/Navigation */
         header {
-            background-color: #0d1117;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
             color: white;
-            padding: 20px 0;
+            padding: 2rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        header .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        header h1 {
-            font-size: 24px;
-            font-weight: 600;
-        }
-        
-
-        /* Container */
-        .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 2rem;
         }
 
-        /* Hero/Headline Section */
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0047a3 100%);
             color: white;
-            padding: 80px 20px;
+            padding: 5rem 2rem;
             text-align: center;
+            max-width: 100%;
         }
 
-        .hero h2 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 30px;
-            line-height: 1.2;
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: slideDown 0.8s ease;
         }
-
-        .whiteH3 {
-        color: white;
-        /* font-weight: bold; */
-        /* background-color: yellow; */
-        }     
-        .workshop-gratuito {
-            /* text-align: right; */
-            color: white;
-        }   
 
         .hero p {
-            font-size: 20px;
-            margin-bottom: 40px;
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
             opacity: 0.95;
         }
 
-        /* Quick Info Section */
-        .quick-info {
-            background-color: #f5f5f5;
-            padding: 40px 20px;
+        .cta-button {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #e55a2b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section.light {
+            background-color: var(--light-color);
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
             text-align: center;
+            color: var(--primary-color);
         }
 
-        .quick-info .container {
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
-        .info-item {
+        .card {
             background: white;
-            padding: 20px;
+            padding: 2rem;
             border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-section h2 {
+            text-align: left;
+            grid-column: 1 / -1;
+        }
+
+        .about-text h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .about-text ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .about-text li {
+            padding: 0.5rem 0;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .about-text li:before {
+            content: "✓";
+            color: var(--success-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .modules {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .module-card {
+            background: white;
+            padding: 2rem;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 4px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .info-item h4 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 16px;
-            font-weight: 600;
+        .module-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
         }
 
-        .info-item p {
-            color: #666;
-            font-size: 14px;
-        }
-
-        /* Sections */
-        section {
-            padding: 60px 20px;
-        }
-
-        section h3 {
-            font-size: 32px;
-            margin-bottom: 30px;
-            color: #0d1117;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 15px;
-        }
-
-        section p {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        section ul {
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        section li {
-            margin-bottom: 12px;
-            color: #555;
-            font-size: 16px;
-        }
-
-        /* Para quem é */
-        .para-quem {
-            background-color: #f9f9f9;
-        }
-
-        /* O que você vai aprender */
-        .o-que-aprender {
-            background-color: white;
-        }
-
-        /* CTA Button */
-        .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .cta-section h3 {
-            font-size: 36px;
-            margin-bottom: 30px;
-            border: none;
-            color: white;
-        }
-
-        .btn {
+        .module-card .duration {
+            background-color: var(--light-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
             display: inline-block;
-            padding: 16px 40px;
-            background-color: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
         }
 
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        .module-card ul {
+            list-style-position: inside;
+            color: #666;
         }
 
-        /* Footer */
-        footer {
-            background-color: #0d1117;
-            color: white;
+        .module-card li {
+            padding: 0.5rem 0;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-item {
             text-align: center;
-            padding: 30px 20px;
-            font-size: 14px;
+            padding: 2rem;
         }
 
-        /* Responsive */
+        .feature-item h4 {
+            color: var(--primary-color);
+            margin: 1rem 0;
+        }
+
+        .pricing {
+            max-width: 400px;
+            margin: 3rem auto;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0047a3 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .pricing h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .pricing .price {
+            font-size: 3rem;
+            margin: 1rem 0;
+            font-weight: bold;
+        }
+
+        .pricing .period {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+        }
+
+        .pricing ul {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .pricing li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .footer-content h4 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .footer-content ul {
+            list-style: none;
+        }
+
+        .footer-content a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-content a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            color: #999;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         @media (max-width: 768px) {
-            .hero h2 {
-                font-size: 32px;
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
             }
 
             .hero p {
-                font-size: 16px;
+                font-size: 1rem;
             }
 
-            section h3 {
-                font-size: 24px;
+            .about-section {
+                grid-template-columns: 1fr;
             }
 
-            .cta-section h3 {
-                font-size: 28px;
+            .section h2 {
+                font-size: 1.8rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header/Navigation -->
     <header>
-        <div class="container">
-            <h1>Trilha DevOps Academy</h1>
-        </div>
+        <nav>
+            <div class="logo">🚀 DevOps Workshop</div>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#modulos">Módulos</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#preco">Preço</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Bloco 1: Headline -->
+    <!-- Hero Section -->
     <section class="hero">
+        <h1>Trilha DevOps Workshop</h1>
+        <p>Domine a engenharia DevOps com práticas modernas e ferramentas essenciais</p>
+        <button class="cta-button">Inscreva-se Agora</button>
+    </section>
+
+    <!-- Sobre Section -->
+    <section class="section" id="sobre">
         <div class="container">
-            <div><h3 class="workshop-gratuito">Workshop gratuito!</h3></div>
-            <h2>GitHub + Azure DevOps</h2>
-            <h3 class="whiteH3"> Primeiros passos para automatizar build, testes e deploy.</h3>
-            <h4>Aprenda, na prática, como automatizar etapas essenciais do desenvolvimento usando GitHub e Azure DevOps.</h4>
-            <h4>Workshop gratuito!</h4>
+            <div class="about-section">
+                <h2>Bem-vindo à Trilha DevOps</h2>
+                <div class="about-text">
+                    <h3>O que você vai aprender</h3>
+                    <ul>
+                        <li>Fundamentos de DevOps e Cultura</li>
+                        <li>Containerização com Docker</li>
+                        <li>Orquestração com Kubernetes</li>
+                        <li>CI/CD com GitHub Actions e Jenkins</li>
+                        <li>Infrastructure as Code (Terraform, Ansible)</li>
+                        <li>Monitoramento e Observabilidade</li>
+                        <li>Segurança em DevOps</li>
+                    </ul>
+                </div>
+                <div class="about-text">
+                    <h3>Por que este curso?</h3>
+                    <ul>
+                        <li>Conteúdo atualizado e prático</li>
+                        <li>Projetos reais e desafios</li>
+                        <li>Instrutores com experiência de mercado</li>
+                        <li>Certificado reconhecido</li>
+                        <li>Suporte e comunidade ativa</li>
+                        <li>Atualizações contínuas</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Bloco 3: Informações rápidas -->
-    <section class="quick-info">
+    <!-- Módulos Section -->
+    <section class="section light" id="modulos">
         <div class="container">
-            <div class="info-item">
-                <h4>📚 Aula Prática</h4>
-                <p>Conteúdo prático e direto ao ponto</p>
-            </div>
-            <div class="info-item">
-                <h4>⏱️ Duração</h4>
-                <p>1 hora</p>
-            </div>
-            <div class="info-item">
-                <h4>💻 Formato</h4>
-                <p>Online e gratuito</p>
-            </div>
-            <div class="info-item">
-                <h4>🎫 Vagas</h4>
-                <p>Limitadas</p>
-            </div>
-            <div class="info-item">
-                <h4>📅 Data</h4>
-                <p>A definir</p>
+            <h2>Estrutura do Curso</h2>
+            <div class="modules">
+                <div class="module-card">
+                    <h3>📌 Módulo 1: Fundamentos DevOps</h3>
+                    <span class="duration">4 semanas</span>
+                    <ul>
+                        <li>Introdução a DevOps</li>
+                        <li>Cultura DevOps</li>
+                        <li>Ferramentas essenciais</li>
+                        <li>Fluxos de trabalho</li>
+                    </ul>
+                </div>
+
+                <div class="module-card">
+                    <h3>🐳 Módulo 2: Docker & Containers</h3>
+                    <span class="duration">3 semanas</span>
+                    <ul>
+                        <li>Docker essenciais</li>
+                        <li>Dockerfiles e imagens</li>
+                        <li>Docker Compose</li>
+                        <li>Registry e distribuição</li>
+                    </ul>
+                </div>
+
+                <div class="module-card">
+                    <h3>☸️ Módulo 3: Kubernetes</h3>
+                    <span class="duration">4 semanas</span>
+                    <ul>
+                        <li>Arquitetura Kubernetes</li>
+                        <li>Deployment e Services</li>
+                        <li>ConfigMaps e Secrets</li>
+                        <li>Storage e Networking</li>
+                    </ul>
+                </div>
+
+                <div class="module-card">
+                    <h3>⚙️ Módulo 4: CI/CD Pipelines</h3>
+                    <span class="duration">3 semanas</span>
+                    <ul>
+                        <li>GitHub Actions</li>
+                        <li>Jenkins avançado</li>
+                        <li>GitLab CI</li>
+                        <li>Deployment automático</li>
+                    </ul>
+                </div>
+
+                <div class="module-card">
+                    <h3>🏗️ Módulo 5: Infrastructure as Code</h3>
+                    <span class="duration">3 semanas</span>
+                    <ul>
+                        <li>Terraform fundamentals</li>
+                        <li>Ansible playbooks</li>
+                        <li>CloudFormation</li>
+                        <li>State management</li>
+                    </ul>
+                </div>
+
+                <div class="module-card">
+                    <h3>📊 Módulo 6: Observabilidade</h3>
+                    <span class="duration">3 semanas</span>
+                    <ul>
+                        <li>Prometheus & Grafana</li>
+                        <li>ELK Stack</li>
+                        <li>Distributed tracing</li>
+                        <li>Alerting</li>
+                    </ul>
+                </div>
+
+                <div class="module-card">
+                    <h3>🔒 Módulo 7: Segurança DevOps</h3>
+                    <span class="duration">2 semanas</span>
+                    <ul>
+                        <li>Segurança em containers</li>
+                        <li>RBAC e IAM</li>
+                        <li>Secrets management</li>
+                        <li>Scanning e compliance</li>
+                    </ul>
+                </div>
+
+                <div class="module-card">
+                    <h3>🎯 Módulo 8: Projeto Final</h3>
+                    <span class="duration">2 semanas</span>
+                    <ul>
+                        <li>Aplicação completa</li>
+                        <li>CI/CD end-to-end</li>
+                        <li>Deployment em produção</li>
+                        <li>Apresentação final</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Bloco 4: Para quem é -->
-    <section class="para-quem">
+    <!-- Recursos Section -->
+    <section class="section" id="recursos">
         <div class="container">
-            <h3>Para quem é este workshop?</h3>
-            <p>Este workshop é ideal para:</p>
-            <ul>
-                <li><strong>Desenvolvedores</strong> que querem aprender sobre automação de build e deploy</li>
-                <li><strong>Engenheiros</strong> interessados em práticas DevOps e CI/CD</li>
-                <li><strong>Iniciantes</strong> em automação que desejam conhecer ferramentas profissionais como GitHub Actions e Azure DevOps</li>
-                <li><strong>Times</strong> que buscam melhorar o processo de desenvolvimento e entrega de software</li>
-                <li>Qualquer pessoa com conhecimento básico de desenvolvimento que quer evoluir na carreira</li>
-            </ul>
+            <h2>Recursos Inclusos</h2>
+            <div class="features">
+                <div class="feature-item">
+                    <div class="icon">📚</div>
+                    <h4>Material Completo</h4>
+                    <p>Slides, documentação e guias práticos para cada tópico</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="icon">🎥</div>
+                    <h4>Videoaulas</h4>
+                    <p>Mais de 100 horas de vídeo em alta qualidade</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="icon">💻</div>
+                    <h4>Labs Práticos</h4>
+                    <p>Ambientes hands-on para testar todo o conhecimento</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="icon">👥</div>
+                    <h4>Comunidade</h4>
+                    <p>Acesso a forum exclusivo com outros alunos</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="icon">🏆</div>
+                    <h4>Certificado</h4>
+                    <p>Certificado de conclusão reconhecido no mercado</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="icon">🔄</div>
+                    <h4>Atualizações</h4>
+                    <p>Conteúdo atualizado constantemente com novas ferramentas</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Bloco 5: O que você vai aprender -->
-    <section class="o-que-aprender">
+    <!-- Preço Section -->
+    <section class="section light" id="preco">
         <div class="container">
-            <h3>O que você vai aprender</h3>
-            <p>Durante este workshop, você terá contato prático com:</p>
-            <ul>
-                <li>Conceitos fundamentais de DevOps e CI/CD (Continuous Integration/Continuous Deployment)</li>
-                <li>Como configurar pipelines de automação com <strong>GitHub Actions</strong></li>
-                <li>Automação de testes e validação de código</li>
-                <li>Deploy automatizado com <strong>Azure DevOps</strong></li>
-                <li>Boas práticas para build e release automático</li>
-                <li>Exemplos práticos e hands-on que você pode aplicar imediatamente</li>
-                <li>Dicas de carreira em DevOps e automação</li>
-            </ul>
+            <h2>Planos e Preços</h2>
+            <div class="pricing">
+                <h3>Acesso Completo</h3>
+                <div class="price">R$ 497</div>
+                <div class="period">Acesso vitalício</div>
+                <button class="cta-button">Inscrever-se</button>
+                <ul>
+                    <li>✓ Todos os 8 módulos</li>
+                    <li>✓ 100+ horas de conteúdo</li>
+                    <li>✓ Labs e projetos práticos</li>
+                    <li>✓ Certificado de conclusão</li>
+                    <li>✓ Suporte via chat</li>
+                    <li>✓ Atualizações gratuitas</li>
+                    <li>✓ Comunidade exclusiva</li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <!-- Bloco 6: CTA -->
-    <section class="cta-section">
+    <!-- Contato Section -->
+    <section class="section" id="contato">
         <div class="container">
-            <h3>Aproveite esta oportunidade!</h3>
-            <p class="whiteH3" style="font-size: 18px; margin-bottom: 40px;">Garanta sua vaga neste workshop gratuito e dê o próximo passo na sua carreira em DevOps.</p>
-            <a href="https://forms.gle/15zNEB56RkPeBTQY9" class="btn" target="_blank">Quero entrar na lista de interesse</a>
+            <h2>Entre em Contato</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>📧 Email</h3>
+                    <p><a href="mailto:contato@devopsworkshop.com" style="color: var(--primary-color); text-decoration: none;">contato@devopsworkshop.com</a></p>
+                </div>
+                <div class="card">
+                    <h3>💬 Discord</h3>
+                    <p><a href="#" style="color: var(--primary-color); text-decoration: none;">Junte-se à nossa comunidade</a></p>
+                </div>
+                <div class="card">
+                    <h3>🌐 Redes Sociais</h3>
+                    <p><a href="#" style="color: var(--primary-color); text-decoration: none;">@DevOpsWorkshop</a></p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Trilha DevOps Academy Workshop. Todos os direitos reservados.</p>
+        <div class="footer-content">
+            <div>
+                <h4>Sobre o Curso</h4>
+                <ul>
+                    <li><a href="#">Currículo</a></li>
+                    <li><a href="#">Instrutores</a></li>
+                    <li><a href="#">Depoimentos</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="#">Documentação</a></li>
+                    <li><a href="#">Comunidade</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Política</h4>
+                <ul>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Trilha DevOps Workshop. Todos os direitos reservados.</p>
+        </div>
     </footer>
 </body>
 </html>

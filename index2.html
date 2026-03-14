@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha DevOps Academy Workshop - GitHub e Azure DevOps</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header/Navigation */
+        header {
+            background-color: #0d1117;
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero/Headline Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .whiteH3 {
+        color: white;
+        /* font-weight: bold; */
+        /* background-color: yellow; */
+        }     
+        .workshop-gratuito {
+            /* text-align: right; */
+            color: white;
+        }   
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        /* Quick Info Section */
+        .quick-info {
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .quick-info .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .info-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-item h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .info-item p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+        }
+
+        section h3 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #0d1117;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+        }
+
+        section p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        section ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        section li {
+            margin-bottom: 12px;
+            color: #555;
+            font-size: 16px;
+        }
+
+        /* Para quem é */
+        .para-quem {
+            background-color: #f9f9f9;
+        }
+
+        /* O que você vai aprender */
+        .o-que-aprender {
+            background-color: white;
+        }
+
+        /* CTA Button */
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta-section h3 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            border: none;
+            color: white;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background-color: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0d1117;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section h3 {
+                font-size: 24px;
+            }
+
+            .cta-section h3 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Trilha DevOps Academy</h1>
+        </div>
+    </header>
+
+    <!-- Bloco 1: Headline -->
+    <section class="hero">
+        <div class="container">
+            <div><h3 class="workshop-gratuito">Workshop gratuito!</h3></div>
+            <h2>GitHub + Azure DevOps</h2>
+            <h3 class="whiteH3"> Primeiros passos para automatizar build, testes e deploy.</h3>
+            <h4>Aprenda, na prática, como automatizar etapas essenciais do desenvolvimento usando GitHub e Azure DevOps.</h4>
+            <h4>Workshop gratuito!</h4>
+        </div>
+    </section>
+
+    <!-- Bloco 3: Informações rápidas -->
+    <section class="quick-info">
+        <div class="container">
+            <div class="info-item">
+                <h4>📚 Aula Prática</h4>
+                <p>Conteúdo prático e direto ao ponto</p>
+            </div>
+            <div class="info-item">
+                <h4>⏱️ Duração</h4>
+                <p>1 hora</p>
+            </div>
+            <div class="info-item">
+                <h4>💻 Formato</h4>
+                <p>Online e gratuito</p>
+            </div>
+            <div class="info-item">
+                <h4>🎫 Vagas</h4>
+                <p>Limitadas</p>
+            </div>
+            <div class="info-item">
+                <h4>📅 Data</h4>
+                <p>A definir</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloco 4: Para quem é -->
+    <section class="para-quem">
+        <div class="container">
+            <h3>Para quem é este workshop?</h3>
+            <p>Este workshop é ideal para:</p>
+            <ul>
+                <li><strong>Desenvolvedores</strong> que querem aprender sobre automação de build e deploy</li>
+                <li><strong>Engenheiros</strong> interessados em práticas DevOps e CI/CD</li>
+                <li><strong>Iniciantes</strong> em automação que desejam conhecer ferramentas profissionais como GitHub Actions e Azure DevOps</li>
+                <li><strong>Times</strong> que buscam melhorar o processo de desenvolvimento e entrega de software</li>
+                <li>Qualquer pessoa com conhecimento básico de desenvolvimento que quer evoluir na carreira</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Bloco 5: O que você vai aprender -->
+    <section class="o-que-aprender">
+        <div class="container">
+            <h3>O que você vai aprender</h3>
+            <p>Durante este workshop, você terá contato prático com:</p>
+            <ul>
+                <li>Conceitos fundamentais de DevOps e CI/CD (Continuous Integration/Continuous Deployment)</li>
+                <li>Como configurar pipelines de automação com <strong>GitHub Actions</strong></li>
+                <li>Automação de testes e validação de código</li>
+                <li>Deploy automatizado com <strong>Azure DevOps</strong></li>
+                <li>Boas práticas para build e release automático</li>
+                <li>Exemplos práticos e hands-on que você pode aplicar imediatamente</li>
+                <li>Dicas de carreira em DevOps e automação</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Bloco 6: CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h3>Aproveite esta oportunidade!</h3>
+            <p class="whiteH3" style="font-size: 18px; margin-bottom: 40px;">Garanta sua vaga neste workshop gratuito e dê o próximo passo na sua carreira em DevOps.</p>
+            <a href="https://forms.gle/15zNEB56RkPeBTQY9" class="btn" target="_blank">Quero entrar na lista de interesse</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Trilha DevOps Academy Workshop. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
