@@ -1,0 +1,34 @@
+# Ignore Visual Studio temporary files, build results, and
+yard files.
+
+[DONT_INCLUDE_NOTHING ]
+*.xproj
+*.user
+*.suo
+*.lock.json
+*.dbmdl
+*.jfm
+*.vsp
+*.vssscc
+*.pdb
+*.obj
+*.exe
+*.dll
+*.cache
+*.publish
+*.proj
+*.log
+*.ncrunchproject
+*.sln.ide
+*.vspx
+*.ncrunchsolution
+# Visual Studio Code
+.vscode/
+# Rider
+.idea/
+# ASP.NET
+wwwroot/lib
+wwwroot/css
+wwwroot/js
+wwwroot/assets
+wwwroot/img
