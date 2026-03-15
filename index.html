@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trilha DevOps Workshop - Domínio Completo da Engenharia DevOps</title>
+    <title>Trilha DevOps Academy Workshop</title>
     <style>
         * {
             margin: 0;
@@ -84,6 +85,17 @@
             animation: slideDown 0.8s ease;
         }
 
+        .tituloH3 {
+            margin-bottom: 2rem;
+        }
+
+        .workshop-gratuito {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: whitesmoke;
+            text-align: right;
+        }
+
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
@@ -125,7 +137,8 @@
 
         .section h2 {
             font-size: 2.5rem;
-            margin-bottom: 3rem;
+            /* margin-bottom: 3rem; */
+            margin-top: 1.5rem;
             text-align: center;
             color: var(--primary-color);
         }
@@ -167,14 +180,14 @@
 
         .about-section {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            /* grid-template-columns: 1fr 1fr; */
+            /* gap: 3rem; */
             align-items: center;
         }
 
         .about-section h2 {
             text-align: left;
-            grid-column: 1 / -1;
+            /* grid-column: 1 / -1; */
         }
 
         .about-text h3 {
@@ -189,11 +202,11 @@
         }
 
         .about-text li {
-            padding: 0.5rem 0;
+            /* padding: 0.5rem 0; */
             color: #666;
-            display: flex;
+            /* display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.5rem; */
         }
 
         .about-text li:before {
@@ -343,6 +356,7 @@
                 opacity: 0;
                 transform: translateY(-20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -373,16 +387,17 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header/Navigation -->
     <header>
         <nav>
-            <div class="logo">🚀 DevOps Workshop</div>
+            <div class="logo">🚀 Trilha DevOps Academy Workshop</div>
             <ul>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#modulos">Módulos</a></li>
                 <li><a href="#recursos">Recursos</a></li>
-                <li><a href="#preco">Preço</a></li>
+                <!-- <li><a href="#preco">Preço</a></li> -->
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
@@ -390,8 +405,15 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Trilha DevOps Workshop</h1>
-        <p>Domine a engenharia DevOps com práticas modernas e ferramentas essenciais</p>
+        <!-- <h1>Trilha DevOps Workshop</h1>
+        <p>Domine a engenharia DevOps com práticas modernas e ferramentas essenciais</p> -->
+        <div>
+            <h2 class="workshop-gratuito">Workshop gratuito!</h2>
+        </div>
+        <h1>GitHub + Azure DevOps</h1>
+        <h2 class="whiteH3"> Primeiros passos para automatizar build, testes e deploy.</h2>
+        <h3 class="tituloH3">Aprenda, na prática, como automatizar etapas essenciais do desenvolvimento usando GitHub e
+            Azure DevOps.</h3>
         <button class="cta-button">Inscreva-se Agora</button>
     </section>
 
@@ -400,6 +422,7 @@
         <div class="container">
             <div class="about-section">
                 <h2>Bem-vindo à Trilha DevOps</h2>
+                <!-- 
                 <div class="about-text">
                     <h3>O que você vai aprender</h3>
                     <ul>
@@ -411,8 +434,36 @@
                         <li>Monitoramento e Observabilidade</li>
                         <li>Segurança em DevOps</li>
                     </ul>
-                </div>
+                </div> -->
                 <div class="about-text">
+                    <h3>Para quem é este workshop?</h3>
+                    <p>Este workshop é ideal para:</p>
+                    <ul>
+                        <li><strong>Desenvolvedores</strong> que querem aprender sobre automação de build e deploy</li>
+                        <li><strong>Engenheiros</strong> interessados em práticas DevOps e CI/CD</li>
+                        <li><strong>Iniciantes</strong> em automação que desejam conhecer ferramentas profissionais como
+                            GitHub Actions e Azure DevOps</li>
+                        <li><strong>Times</strong> que buscam melhorar o processo de desenvolvimento e entrega de
+                            software</li>
+                        <li>Qualquer pessoa com conhecimento básico de desenvolvimento que quer evoluir na carreira</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about-section">
+                <div class="about-text">
+                    <h3>O que você vai aprender</h3>
+                    <p>Durante este workshop, você terá contato prático com:</p>
+                    <ul>
+                        <li>Conceitos fundamentais de DevOps e CI/CD (Continuous Integration/Continuous Deployment)</li>
+                        <li>Como configurar pipelines de automação com <strong>GitHub Actions</strong></li>
+                        <li>Automação de testes e validação de código</li>
+                        <li>Deploy automatizado com <strong>Azure DevOps</strong></li>
+                        <li>Boas práticas para build e release automático</li>
+                        <li>Exemplos práticos e hands-on que você pode aplicar imediatamente</li>
+                        <li>Dicas de carreira em DevOps e automação</li>
+                    </ul>
+                </div>
+                <!-- <div class="about-text">
                     <h3>Por que este curso?</h3>
                     <ul>
                         <li>Conteúdo atualizado e prático</li>
@@ -422,7 +473,7 @@
                         <li>Suporte e comunidade ativa</li>
                         <li>Atualizações contínuas</li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -568,7 +619,7 @@
     </section>
 
     <!-- Preço Section -->
-    <section class="section light" id="preco">
+    <!-- <section class="section light" id="preco">
         <div class="container">
             <h2>Planos e Preços</h2>
             <div class="pricing">
@@ -587,7 +638,7 @@
                 </ul>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contato Section -->
     <section class="section" id="contato">
@@ -596,11 +647,14 @@
             <div class="grid">
                 <div class="card">
                     <h3>📧 Email</h3>
-                    <p><a href="mailto:contato@devopsworkshop.com" style="color: var(--primary-color); text-decoration: none;">contato@devopsworkshop.com</a></p>
+                    <p><a href="mailto:contato@devopsworkshop.com"
+                            style="color: var(--primary-color); text-decoration: none;">contato@devopsworkshop.com</a>
+                    </p>
                 </div>
                 <div class="card">
                     <h3>💬 Discord</h3>
-                    <p><a href="#" style="color: var(--primary-color); text-decoration: none;">Junte-se à nossa comunidade</a></p>
+                    <p><a href="#" style="color: var(--primary-color); text-decoration: none;">Junte-se à nossa
+                            comunidade</a></p>
                 </div>
                 <div class="card">
                     <h3>🌐 Redes Sociais</h3>
@@ -643,4 +697,5 @@
         </div>
     </footer>
 </body>
+
 </html>
