@@ -76,7 +76,9 @@
             color: white;
             padding: 5rem 2rem;
             text-align: center;
-            max-width: 100%;
+            /* max-width: 100%; */
+            width: 100%;
+            margin-bottom: 30rem;
         }
 
         .hero h1 {
@@ -126,6 +128,9 @@
             margin: 0 auto;
             padding: 0 2rem;
         }
+        #recursos.section{
+            margin-bottom: 2rem;
+        }
 
         .section {
             padding: 5rem 0;
@@ -138,7 +143,7 @@
         .section h2 {
             font-size: 2.5rem;
             /* margin-bottom: 3rem; */
-            margin-top: 1.5rem;
+            margin-top: 3rem;
             text-align: center;
             color: var(--primary-color);
         }
@@ -184,10 +189,12 @@
             /* gap: 3rem; */
             align-items: center;
         }
-
         .about-section h2 {
             text-align: left;
             /* grid-column: 1 / -1; */
+        }
+        .antesH3 {
+            margin-top: 3rem;
         }
 
         .about-text h3 {
@@ -381,6 +388,7 @@
                 grid-template-columns: 1fr;
             }
 
+
             .section h2 {
                 font-size: 1.8rem;
             }
@@ -394,9 +402,9 @@
         <nav>
             <div class="logo">🚀 Trilha DevOps Academy Workshop</div>
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#modulos">Módulos</a></li>
+                <!-- <li><a href="#modulos">Módulos</a></li> -->
                 <li><a href="#recursos">Recursos</a></li>
                 <!-- <li><a href="#preco">Preço</a></li> -->
                 <li><a href="#contato">Contato</a></li>
@@ -405,7 +413,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero">
         <div class="container">
 
             <!-- <h1>Trilha DevOps Workshop</h1>
@@ -440,7 +448,7 @@
                     </ul>
                 </div> -->
                 <div class="about-text">
-                    <h3>Para quem é este workshop?</h3>
+                    <h3 class="antesH3">Para quem é este workshop?</h3>
                     <p>Este workshop é ideal para:</p>
                     <ul>
                         <li><strong>Desenvolvedores</strong> que querem aprender sobre automação de build e deploy</li>
@@ -455,7 +463,7 @@
             </div>
             <div class="about-section">
                 <div class="about-text">
-                    <h3>O que você vai aprender</h3>
+                    <h3 class="antesH3">O que você vai aprender</h3>
                     <p>Durante este workshop, você terá contato prático com:</p>
                     <ul>
                         <li>Conceitos fundamentais de DevOps e CI/CD (Continuous Integration/Continuous Deployment)</li>
@@ -483,7 +491,7 @@
     </section>
 
     <!-- Módulos Section -->
-    <section class="section light" id="modulos">
+    <!-- <section class="section light" id="modulos">
         <div class="container">
             <h2>Estrutura do Curso</h2>
             <div class="modules">
@@ -576,7 +584,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Recursos Section -->
     <section class="section" id="recursos">
