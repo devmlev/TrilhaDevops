@@ -387,6 +387,23 @@
             }
         }
 
+        /* Smooth scroll for anchor navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Scroll-reveal: sections start hidden and slide up */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
@@ -447,7 +464,7 @@
     </section>
 
     <!-- Sobre Section -->
-    <section class="section" id="sobre">
+    <section class="section scroll-reveal" id="sobre">
         <div class="container">
             <div class="about-section">
                 <h2>Bem-vindo à Trilha DevOps Academy</h2>
@@ -604,7 +621,7 @@
     </section> -->
 
     <!-- Recursos Section -->
-    <section class="section" id="recursos">
+    <section class="section scroll-reveal" id="recursos">
         <div class="container">
             <h2>Recursos Inclusos</h2>
             <div class="features">
@@ -682,7 +699,7 @@
     </section> -->
 
     <!-- Contato Section -->
-    <section class="section" id="contato">
+    <section class="section scroll-reveal" id="contato">
         <div class="container">
             <h2>Entre em Contato</h2>
             <div class="grid">
@@ -739,6 +756,25 @@
             <p>&copy; 2026 Trilha DevOps Workshop. Todos os direitos reservados.</p>
         </div>
     </footer>
+    <!-- Smooth scroll-reveal using Intersection Observer -->
+    <script>
+        (function () {
+            var elements = document.querySelectorAll('.scroll-reveal');
+            if (!('IntersectionObserver' in window)) {
+                elements.forEach(function (el) { el.classList.add('visible'); });
+                return;
+            }
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            elements.forEach(function (el) { observer.observe(el); });
+        })();
+    </script>
 </body>
 
 </html>
