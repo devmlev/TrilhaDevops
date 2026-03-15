@@ -91,6 +91,11 @@
             margin-bottom: 2rem;
         }
 
+        .whiteH3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
         .workshop-gratuito {
             font-size: 1.5rem;
             font-weight: bold;
@@ -176,6 +181,15 @@
         .card p {
             color: #666;
             line-height: 1.8;
+        }
+
+        .contact-link {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
         }
 
         .icon {
@@ -671,8 +685,7 @@
             <div class="grid">
                 <div class="card">
                     <h3>📧 Email</h3>
-                    <p><a href="mailto:contato@devopsworkshop.com"
-                            style="color: var(--primary-color); text-decoration: none;">contato@devopsworkshop.com</a>
+                    <p><a href="mailto:contato@devopsworkshop.com" class="contact-link">contato@devopsworkshop.com</a>
                     </p>
                 </div>
                 <!-- <div class="card">
@@ -682,7 +695,7 @@
                 </div> -->
                 <div class="card">
                     <h3>🌐 Redes Sociais</h3>
-                    <p><a href="#" style="color: var(--primary-color); text-decoration: none;">@DevOpsWorkshop</a></p>
+                    <p><a href="#" class="contact-link">@DevOpsWorkshop</a></p>
                 </div>
             </div>
         </div>
