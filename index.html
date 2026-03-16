@@ -4,355 +4,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trilha DevOps Academy Workshop</title>
+    <title>Workshop e Certifica&ccedil;&atilde;o - GitHub + Azure DevOps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <!-- Header/Navigation -->
-    <header>
-        <nav>
-            <div class="logo">🚀 Trilha DevOps Academy Workshop</div>
-            <ul>
-                <!-- <li><a href="#">Home</a></li> -->
-                <!-- <li><a href="#sobre">Sobre</a></li> -->
-                <!-- <li><a href="#modulos">Módulos</a></li> -->
-                <!-- <li><a href="#recursos">Recursos</a></li> -->
-                <!-- <li><a href="#preco">Preço</a></li> -->
-                <!-- <li><a href="#contato">Contato</a></li> -->
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-
-            <!-- <h1>Trilha DevOps Workshop</h1>
-        <p>Domine a engenharia DevOps com práticas modernas e ferramentas essenciais</p> -->
-            <h2 class="workshop-gratuito">Workshop gratuito!</h2>
-            <h1>GitHub + Azure DevOps</h1>
-            <h2 class="whiteH3"> Primeiros passos para automatizar build, testes e deploy.</h2>
-            <h3 class="tituloH3">Aprenda, na prática, como automatizar etapas essenciais do desenvolvimento usando
-                GitHub e
-                Azure DevOps.</h3>
-            <button class="cta-button">Inscreva-se Agora</button>
-        </div>
-
-    </section>
-
-    <!-- Sobre Section -->
-    <section class="section scroll-reveal" id="sobre">
-        <div class="container">
-            <div class="about-section">
-                <h2>Bem-vindo à Trilha DevOps Academy</h2>
-                <!-- 
-                <div class="about-text">
-                    <h3>O que você vai aprender</h3>
-                    <ul>
-                        <li>Fundamentos de DevOps e Cultura</li>
-                        <li>Containerização com Docker</li>
-                        <li>Orquestração com Kubernetes</li>
-                        <li>CI/CD com GitHub Actions e Jenkins</li>
-                        <li>Infrastructure as Code (Terraform, Ansible)</li>
-                        <li>Monitoramento e Observabilidade</li>
-                        <li>Segurança em DevOps</li>
-                    </ul>
-                </div> -->
-                <div class="about-text">
-                    <h3 class="antesH3">Para quem é este workshop?</h3>
-                    <p>Este workshop é ideal para:</p>
-                    <ul>
-                        <li><strong>Desenvolvedores</strong> que querem aprender sobre automação de build e deploy</li>
-                        <li><strong>Engenheiros</strong> interessados em práticas DevOps e CI/CD</li>
-                        <li><strong>Iniciantes</strong> em automação que desejam conhecer ferramentas profissionais como
-                            GitHub Actions e Azure DevOps</li>
-                        <li><strong>Times</strong> que buscam melhorar o processo de desenvolvimento e entrega de
-                            software</li>
-                        <li>Qualquer pessoa com conhecimento básico de desenvolvimento que quer evoluir na carreira</li>
-                    </ul>
-                </div>
+    <div class="page-shell">
+        <header class="topbar" id="inicio">
+            <div class="brand" aria-label="Logo do workshop">
+                <img src="logo.png" alt="Logo do workshop" class="brand-mark">
+                <span>Workshop GitHub + Azure DevOps</span>
             </div>
-            <div class="about-section">
-                <div class="about-text">
-                    <h3 class="antesH3">O que você vai aprender</h3>
-                    <p>Durante este workshop, você terá contato prático com:</p>
-                    <ul>
-                        <li>Conceitos fundamentais de DevOps e CI/CD (Continuous Integration/Continuous Deployment)</li>
-                        <li>Como configurar pipelines de automação com <strong>GitHub Actions</strong></li>
-                        <li>Automação de testes e validação de código</li>
-                        <li>Deploy automatizado com <strong>Azure DevOps</strong></li>
-                        <li>Boas práticas para build e release automático</li>
-                        <li>Exemplos práticos e hands-on que você pode aplicar imediatamente</li>
-                        <li>Dicas de carreira em DevOps e automação</li>
-                    </ul>
-                </div>
-                <!-- <div class="about-text">
-                    <h3>Por que este curso?</h3>
-                    <ul>
-                        <li>Conteúdo atualizado e prático</li>
-                        <li>Projetos reais e desafios</li>
-                        <li>Instrutores com experiência de mercado</li>
-                        <li>Certificado reconhecido</li>
-                        <li>Suporte e comunidade ativa</li>
-                        <li>Atualizações contínuas</li>
-                    </ul>
-                </div> -->
-            </div>
-        </div>
-    </section>
+            <!-- <nav aria-label="Navega&ccedil;&atilde;o principal">
+                <a href="#inicio">In&iacute;cio</a>
+                <a href="#conteudo">Conte&uacute;do do Workshop</a>
+                <a href="#aprender">O que esperar</a>
+                <a href="#certificado">Certificado</a>
+                <a href="#contato">Contato</a>
+            </nav> -->
+        </header>
 
-    <!-- Módulos Section -->
-    <!-- <section class="section light" id="modulos">
-        <div class="container">
-            <h2>Estrutura do Curso</h2>
-            <div class="modules">
-                <div class="module-card">
-                    <h3>📌 Módulo 1: Fundamentos DevOps</h3>
-                    <span class="duration">4 semanas</span>
-                    <ul>
-                        <li>Introdução a DevOps</li>
-                        <li>Cultura DevOps</li>
-                        <li>Ferramentas essenciais</li>
-                        <li>Fluxos de trabalho</li>
-                    </ul>
-                </div>
-
-                <div class="module-card">
-                    <h3>🐳 Módulo 2: Docker & Containers</h3>
-                    <span class="duration">3 semanas</span>
-                    <ul>
-                        <li>Docker essenciais</li>
-                        <li>Dockerfiles e imagens</li>
-                        <li>Docker Compose</li>
-                        <li>Registry e distribuição</li>
-                    </ul>
-                </div>
-
-                <div class="module-card">
-                    <h3>☸️ Módulo 3: Kubernetes</h3>
-                    <span class="duration">4 semanas</span>
-                    <ul>
-                        <li>Arquitetura Kubernetes</li>
-                        <li>Deployment e Services</li>
-                        <li>ConfigMaps e Secrets</li>
-                        <li>Storage e Networking</li>
-                    </ul>
-                </div>
-
-                <div class="module-card">
-                    <h3>⚙️ Módulo 4: CI/CD Pipelines</h3>
-                    <span class="duration">3 semanas</span>
-                    <ul>
-                        <li>GitHub Actions</li>
-                        <li>Jenkins avançado</li>
-                        <li>GitLab CI</li>
-                        <li>Deployment automático</li>
-                    </ul>
-                </div>
-
-                <div class="module-card">
-                    <h3>🏗️ Módulo 5: Infrastructure as Code</h3>
-                    <span class="duration">3 semanas</span>
-                    <ul>
-                        <li>Terraform fundamentals</li>
-                        <li>Ansible playbooks</li>
-                        <li>CloudFormation</li>
-                        <li>State management</li>
-                    </ul>
-                </div>
-
-                <div class="module-card">
-                    <h3>📊 Módulo 6: Observabilidade</h3>
-                    <span class="duration">3 semanas</span>
-                    <ul>
-                        <li>Prometheus & Grafana</li>
-                        <li>ELK Stack</li>
-                        <li>Distributed tracing</li>
-                        <li>Alerting</li>
-                    </ul>
-                </div>
-
-                <div class="module-card">
-                    <h3>🔒 Módulo 7: Segurança DevOps</h3>
-                    <span class="duration">2 semanas</span>
-                    <ul>
-                        <li>Segurança em containers</li>
-                        <li>RBAC e IAM</li>
-                        <li>Secrets management</li>
-                        <li>Scanning e compliance</li>
-                    </ul>
-                </div>
-
-                <div class="module-card">
-                    <h3>🎯 Módulo 8: Projeto Final</h3>
-                    <span class="duration">2 semanas</span>
-                    <ul>
-                        <li>Aplicação completa</li>
-                        <li>CI/CD end-to-end</li>
-                        <li>Deployment em produção</li>
-                        <li>Apresentação final</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Recursos Section -->
-    <section class="section scroll-reveal" id="recursos">
-        <div class="container">
-            <h2>Recursos Inclusos</h2>
-            <div class="features">
-                <div class="feature-item">
-                    <div class="icon">📚</div>
-                    <!-- <h4>Material Completo</h4>
-                    <p>Slides, documentação e guias práticos para cada tópico</p> -->
-                    <h4>Aula Prática</h4>
-                    <p>Conteúdo prático e direto ao ponto</p>
-                </div>
-
-                <div class="feature-item">
-                    <div class="icon">⏱️</div>
-                    <!-- <h4>Videoaulas</h4>
-                    <p>Mais de 100 horas de vídeo em alta qualidade</p> -->
-                    <h4>Duração</h4>
-                    <p>1 hora</p>
-                </div>
-
-                <div class="feature-item">
-                    <div class="icon">💻</div>
-                    <!-- <h4>Labs Práticos</h4>
-                    <p>Ambientes hands-on para testar todo o conhecimento</p> -->
-                    <h4>Formato</h4>
-                    <p>Online e gratuito</p>
-                </div>
-
-                <div class="feature-item">
-                    <div class="icon">🎫</div>
-                    <!-- <h4>Comunidade</h4>
-                    <p>Acesso a forum exclusivo com outros alunos</p> -->
-                    <h4>Vagas</h4>
-                    <p>Limitadas</p>
-                </div>
-
-                <div class="feature-item">
-                    <div class="icon">📅</div>
-                    <!-- <h4>Atualizações</h4>
-                    <p>Conteúdo atualizado constantemente com novas ferramentas</p> -->
-                    <h4>Data</h4>
-                    <p>A definir</p>
-                </div>
-
-                <div class="feature-item">
-                    <div class="icon">🏆</div>
-                    <h4>Certificado</h4>
-                    <!-- <p>Certificado de conclusão reconhecido no mercado</p> -->
-                    <p>Certificado de conclusão</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Preço Section -->
-    <!-- <section class="section light" id="preco">
-        <div class="container">
-            <h2>Planos e Preços</h2>
-            <div class="pricing">
-                <h3>Acesso Completo</h3>
-                <div class="price">R$ 497</div>
-                <div class="period">Acesso vitalício</div>
-                <button class="cta-button">Inscrever-se</button>
-                <ul>
-                    <li>✓ Todos os 8 módulos</li>
-                    <li>✓ 100+ horas de conteúdo</li>
-                    <li>✓ Labs e projetos práticos</li>
-                    <li>✓ Certificado de conclusão</li>
-                    <li>✓ Suporte via chat</li>
-                    <li>✓ Atualizações gratuitas</li>
-                    <li>✓ Comunidade exclusiva</li>
-                </ul>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Contato Section -->
-    <section class="section scroll-reveal" id="contato">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>📧 Email</h3>
-                    <p><a href="mailto:contato.trilhadevops@gmail.com" class="contact-link">contato.trilhadevops@gmail.com</a>
-                    </p>
-                </div>
-                <!-- <div class="card">
-                    <h3>💬 Discord</h3>
-                    <p><a href="#" style="color: var(--primary-color); text-decoration: none;">Junte-se à nossa
-                            comunidade</a></p>
-                </div> -->
-                <div class="card">
-                    <h3>🌐 Redes Sociais</h3>
-                    <p><a href="#" class="contact-link">@DevOpsWorkshop</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
+        <section class="hero" aria-label="Apresenta&ccedil;&atilde;o principal">
             <div>
-                <h4>Instrutor</h4>
+                <p class="eyebrow">WORKSHOP GRATUITO + CERTIFICADO</p>
+                <h1>GitHub + Azure DevOps para automatizar builds, testes e deploy</h1>
+                <p>
+                    Primeiros passos para voc&ecirc; estruturar pipelines de CI/CD com clareza,
+                    reduzindo tarefas manuais e acelerando entregas.
+                </p>
+                <div class="hero-quote">
+                    <!-- Aprenda, na pr&aacute;tica, como automatizar etapas essenciais do desenvolvimento
+                    usando GitHub e Azure DevOps. -->
+Em apenas 1 hora, veja como estruturar um pipeline real de build, testes e deploy usando GitHub e Azure DevOps.                    
+                </div>
+            </div>
+            <div class="hero-art">
+                <img src="workshop.png" alt="Workshop GitHub e Azure DevOps" class="hero-art-image">
+            </div>
+            <div class="hero-last-x">
+                <a href="https://forms.gle/15zNEB56RkPeBTQY9" class="btn-primary">Garantir minha vaga gratuitamente</a>
+            </div>
+        </section>
+
+        <section id="conteudo">
+            <div class="section-head">
+                <h2>Para quem &eacute; este workshop?</h2>
+                <p>Este workshop &eacute; ideal para profissionais e equipes que querem elevar o n&iacute;vel de
+                    automa&ccedil;&atilde;o no ciclo de desenvolvimento.</p>
+            </div>
+            <div class="audience-grid">
+                <article class="card">
+                    <strong>Desenvolvedores</strong>
+                    <p>Querem aprender a automatizar build e deploy com ferramentas usadas no mercado.</p>
+                </article>
+                <article class="card">
+                    <strong>Engenheiros de software</strong>
+                    <p>Possuem interesse em DevOps e CI/CD para tornar o processo de entrega mais confiavel.</p>
+                </article>
+                <article class="card">
+                    <strong>Iniciantes em automa&ccedil;&atilde;o</strong>
+                    <p>Querem conhecer GitHub Actions e Azure DevOps de forma objetiva e aplicada.</p>
+                </article>
+                <article class="card">
+                    <strong>Times de tecnologia</strong>
+                    <p>Buscam melhorar o fluxo de desenvolvimento, testes e entrega de software.</p>
+                </article>
+                <article class="card">
+                    <strong>Profissionais com base em desenvolvimento</strong>
+                    <p>Desejam evoluir na carreira e ampliar repert&oacute;rio em pr&aacute;ticas modernas de
+                        engenharia.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="aprender">
+            <div class="section-head">
+                <h2>O que voc&ecirc; vai aprender</h2>
+                <p>Durante o workshop, voc&ecirc; ter&aacute; contato pr&aacute;tico com os pilares da
+                    automa&ccedil;&atilde;o e boas pr&aacute;ticas de CI/CD.</p>
+            </div>
+            <div class="learning">
                 <ul>
-                    <!-- <li><a href="#">Currículo</a></li> -->
-                    <li><a href="https://www.linkedin.com/in/mlevinspuhl">Marcel Levinspuhl</a></li>
-                    <!-- <li><a href="#">Depoimentos</a></li> -->
+                    <li>Conceitos fundamentais de DevOps e CI/CD</li>
+                    <li>Como configurar pipelines de automa&ccedil;&atilde;o com GitHub Actions</li>
+                    <li>Automa&ccedil;&atilde;o de testes e valida&ccedil;&atilde;o de c&oacute;digo</li>
+                    <li>Dicas de carreira em DevOps e automa&ccedil;&atilde;o</li>
+                </ul>
+                <ul>
+                    <li>Deploy automatizado com Azure DevOps</li>
+                    <li>Boas pr&aacute;ticas para build e release autom&aacute;ticos</li>
+                    <li>Exemplos pr&aacute;ticos e hands-on para aplicar imediatamente</li>
                 </ul>
             </div>
-            <div>
-                <h4>Recursos para o curso</h4>
-                <ul>
-                    <li><a href="https://github.com/devmlev/ReactAppCurso">Github</a></li>
-                    <li><a href="download.html">Microsoft Downloads</a></li>
-                    <!-- <li><a href="#">Comunidade</a></li>
-                    <li><a href="#">Blog</a></li> -->
-                </ul>
+        </section>
+
+        <section id="instrutor">
+            <div class="section-head">
+                <h2>Com quem vou aprender</h2>
             </div>
-            <div>
-                <h4>Política</h4>
-                <ul>
-                    <li><a href="privacidade.html">Privacidade</a></li>
-                    <!-- <li><a href="#">Termos de Uso</a></li>
-                    <li><a href="#">FAQ</a></li> -->
-                </ul>
+            <article class="mentor-card">
+                <p><a href="https://www.linkedin.com/in/mlevinspuhl">Marcel Levinspuhl</a> &eacute; um profissional de tecnologia com mais de 20 anos de experi&ecirc;ncia em desenvolvimento de software, engenharia e automa&ccedil;&atilde;o de ambientes. Atuou no mercado brasileiro em empresas de tecnologia e hoje trabalha no mercado irland&ecirc;s com foco em pr&aacute;ticas modernas de DevOps, automa&ccedil;&atilde;o e cloud.</p>
+                <p>Com s&oacute;lida experi&ecirc;ncia em Java e .NET, construiu uma carreira que une conhecimento t&eacute;cnico profundo, vis&atilde;o pr&aacute;tica do ciclo completo de desenvolvimento de software e forte capacidade de transformar processos complexos em fluxos mais &aacute;geis, organizados e eficientes.</p>
+                <p>No workshop, ele compartilha essa experi&ecirc;ncia de forma aplicada, mostrando como ferramentas como GitHub e Azure DevOps podem ser usadas na pr&aacute;tica para automatizar etapas essenciais do desenvolvimento.</p>
+            </article>
+        </section>        
+
+        <section id="certificado">
+            <div class="section-head">
+                <!-- <h2>Recursos inclusos</h2> -->
+                 <h2>O que esperar do workshop</h2>
             </div>
-        </div>
-        <div class="footer-bottom">
-        <p>Informações de Licenciamento: O Azure DevOps Server Express é limitado a 5 usuários ativos. O SQL Server Express possui limite de 10GB por banco de dados.</p>
-        <p><em>Microsoft, Azure e SQL Server são marcas registradas do grupo de empresas Microsoft. Esta página fornece apenas links de redirecionamento para o conteúdo oficial.</em></p>
-            <p>&copy; 2026 Trilha DevOps Workshop. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-    <!-- Smooth scroll-reveal using Intersection Observer -->
-    <script>
-        (function () {
-            var elements = document.querySelectorAll('.scroll-reveal');
-            if (!('IntersectionObserver' in window)) {
-                elements.forEach(function (el) { el.classList.add('visible'); });
-                return;
-            }
-            var observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-            elements.forEach(function (el) { observer.observe(el); });
-        })();
-    </script>
+            <div class="resources">
+                <article class="resource-item">
+                    <h3>Aula pr&aacute;tica</h3>
+                    <p>Conte&uacute;do direto ao ponto, com foco em execu&ccedil;&atilde;o.</p>
+                </article>
+                <article class="resource-item">
+                    <h3>Dura&ccedil;&atilde;o</h3>
+                    <p>1 hora de imers&atilde;o orientada para aplica&ccedil;&atilde;o real.</p>
+                </article>
+                <article class="resource-item">
+                    <h3>Formato</h3>
+                    <!-- <p>Online e gratuito, com acesso simplificado.</p> -->
+                    <p>Evento on-line, ao vivo, via Teams.</p>
+                </article>
+                <article class="resource-item">
+                    <h3>Vagas</h3>
+                    <p>Limitadas para manter a din&acirc;mica do encontro.</p>
+                </article>
+                <article class="resource-item">
+                    <h3>Data</h3>
+                    <!-- <p>A definir, com divulga&ccedil;&atilde;o antecipada.</p> -->
+                    <p>Será definida em breve. Garanta sua vaga gratuita e inscreva vá se já!</p>
+                </article>
+                <article class="resource-item">
+                    <h3>Certificado</h3>
+                    <!-- <p>Certificado de conclus&atilde;o ao final do workshop.</p> -->
+                    <p>Emitido ao final do curso. Gratuito e válido internacionalmente.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="cta-final" id="contato" aria-label="Chamada final para inscri&ccedil;&atilde;o">
+            <div class="cta-copy">
+                <h2>Garanta sua vaga no workshop</h2>
+                <p>
+                    <!-- Aprenda, na pr&aacute;tica, como automatizar etapas essenciais do desenvolvimento
+                    com GitHub e Azure DevOps. -->
+Em apenas 1 hora, veja como estruturar um pipeline real de build, testes e deploy usando GitHub e Azure DevOps.                    
+                </p>
+            </div>
+            <a href="https://forms.gle/15zNEB56RkPeBTQY9" class="btn-primary">Garantir minha vaga gratuitamente</a>
+        </section>
+    </div>
 </body>
 
 </html>
