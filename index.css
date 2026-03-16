@@ -44,8 +44,7 @@ body {
 
 /* 4) Header */
 .topbar {
-  position: sticky;
-  top: 12px;
+  position: static;
   z-index: 30;
   background: rgba(255, 249, 241, 0.88);
   -webkit-backdrop-filter: blur(10px);
@@ -373,6 +372,34 @@ section {
   left: 0;
   top: 7px;
   box-shadow: 0 0 0 3px rgba(15, 124, 143, 0.15);
+}
+
+.learning li > ul {
+  margin-top: 10px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.learning li > ul > li {
+  padding-left: 14px;
+  margin-bottom: 8px;
+}
+
+.learning li > ul > li::before {
+  content: "-";
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-shadow: none;
+  color: var(--muted);
+  font-weight: 700;
 }
 
 /* 10) Grid de recursos */
